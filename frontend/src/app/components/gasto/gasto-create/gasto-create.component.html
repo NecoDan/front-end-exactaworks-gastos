@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>Novo Gasto</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome Pessoa"
+                   [(ngModel)]="gasto.nomePessoa" name="nomePessoa">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição"
+                   [(ngModel)]="gasto.descricao" name="descricao">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Valor (R$)"
+                   [(ngModel)]="gasto.valor" name="valor">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Tags"
+                   [(ngModel)]="gasto.tags" name="tags">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createGasto()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
+

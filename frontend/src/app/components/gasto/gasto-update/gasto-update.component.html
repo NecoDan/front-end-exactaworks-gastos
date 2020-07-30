@@ -1,0 +1,39 @@
+<mat-card class="mat-app-background basic-container">
+    <mat-card-title>Visualizar Detalhe Gasto</mat-card-title>
+    <mat-card class="example-card"
+              fxFlex="0 1 calc(33.3% - 11px)"
+              fxFlex.lt-md="0 1 calc(50% - 11px)"
+              fxFlex.lt-sm="100%">
+        <mat-card-title class="mat-card-title-live">
+            <div class="row">
+                <p>
+                    <span style="font-size:20pt;" fxFlex="70" fxLayoutAlign="start center">{{gasto.descricao}}</span>
+                    <span fxFlex></span>
+                    <mat-chip fxFlex="25" class="mat-chip-date" selected="true" fxLayoutAlign="center center">
+                        <span style="font-size:15pt;">Nome Pessoa: {{gasto.nomePessoa}}</span>
+                    </mat-chip>
+                    <mat-chip fxFlex="25" class="mat-chip-date" selected="true" fxLayoutAlign="center center">
+                        <span style="font-size:15pt;">Valor (R$): {{gasto.valor | currency: "BRL"}}</span>
+                    </mat-chip>
+                    <mat-chip fxFlex="25" class="mat-chip-date" selected="true" fxLayoutAlign="center center">
+                        <span style="font-size:15pt;">Tags: {{getToStringTags(gasto.tags)}}</span>
+                    </mat-chip>
+                    <mat-chip fxFlex="25" class="mat-chip-date" selected="true" fxLayoutAlign="center center">
+                        <span style="font-size:15pt;">Dt. Cadastro: {{gasto.dt}}</span>
+                    </mat-chip>
+                </p>
+            </div>
+        </mat-card-title>
+        <mat-card-content fxLayoutAlign="center center">
+            <div>
+                <iframe width="560" height="315" [src]="gasto.descricao" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <button mat-raised-button (click)="voltar()">
+        Voltar
+    </button>
+</mat-card>

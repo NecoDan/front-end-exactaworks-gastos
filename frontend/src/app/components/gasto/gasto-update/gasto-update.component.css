@@ -1,0 +1,28 @@
+button {
+    margin: 20px 15px 0px 0px;
+}
+
+.mat-card-live{
+    border: 100px solid #CFD8DC;
+    border-radius: 8px 6px 12px / 4px 8px;
+    padding-top: 50px;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom: 25%;
+    margin: 50px;
+}
+
+.mat-card-title-live{
+    padding-left:10px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-bottom: 0px;
+    min-height: 70px;
+}
+
+.mat-chip-date{
+    font-family: Roboto, Arial, sans-serif;
+    background-color: #90CAF9 !important;
+    color: red !important;
+}
+

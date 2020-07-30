@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Excluir Gasto</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                   [value]="gasto.nomePessoa" name="nomePessoa" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Valor (R$)"
+                   [value]="gasto.valor" name="valor" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteGasto()" color="warn">
+        Excluir
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
